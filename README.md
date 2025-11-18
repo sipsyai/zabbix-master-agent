@@ -40,15 +40,95 @@ This repository contains automated scripts and tools for Zabbix monitoring syste
    ZABBIX_TIMEOUT=30
    ```
 
-## Usage with Zabbix Master Agent Skill
+## Usage with Claude Code and Zabbix Master Agent Skill
 
-All scripts in this repository are designed to work seamlessly with the `zabbix-master` agent skill. The agent automatically handles:
-- Authentication and session management
-- API connection management
-- Error handling and retries
-- Configuration from `.env` file
+This repository includes a powerful **Claude Code skill** that automates Zabbix operations through natural language commands. The `zabbix-master` agent skill provides intelligent automation for all Zabbix-related tasks.
 
-Simply invoke the zabbix-master skill and it will automatically use the credentials from your `.env` file.
+### How It Works
+
+The zabbix-master skill is a Claude Code agent that:
+- **Automatically detects** Zabbix-related keywords in your requests
+- **Reads configuration** from your `.env` file automatically
+- **Handles API authentication** and session management
+- **Executes operations** with built-in error handling and retries
+- **Provides intelligent responses** with context-aware suggestions
+
+### Using the Skill in Claude Code
+
+Simply open this project in Claude Code and ask questions or request operations in natural language:
+
+**Examples:**
+
+```
+You: "Check the status of all hosts in Zabbix"
+Claude: [Activates zabbix-master skill, connects to your Zabbix server,
+         and provides detailed host status report]
+
+You: "Add SNMP monitoring for device 192.168.1.100"
+Claude: [Uses the skill to configure SNMP monitoring, link templates,
+         and verify connectivity]
+
+You: "Show me all triggers that are in problem state"
+Claude: [Queries Zabbix API through the skill and displays active problems
+         with details]
+
+You: "Create a graph for CPU utilization on server DC01"
+Claude: [Creates the graph items, configures visualization, and confirms creation]
+```
+
+### Skill Capabilities
+
+The zabbix-master skill can handle:
+
+- **Host Management**: Add, update, delete, and monitor hosts
+- **Item Configuration**: Create items, check values, troubleshoot collection issues
+- **Template Operations**: Link templates, export/import configurations
+- **Monitoring Setup**: Configure SNMP, agents, network discovery
+- **Graph Creation**: Build custom graphs and dashboards
+- **Problem Analysis**: Diagnose issues, check triggers, analyze events
+- **Security Audits**: Review permissions, check configurations
+- **Performance Optimization**: Analyze database, optimize settings
+
+### Manual Script Execution
+
+You can also run the example scripts directly with Python:
+
+```bash
+# Navigate to examples directory
+cd examples/snmp
+
+# Run a script
+python add_snmp_devices.py
+```
+
+All scripts automatically use the credentials from your `.env` file.
+
+### Skill vs Manual Scripts
+
+| Method | Best For | Advantages |
+|--------|----------|------------|
+| **Claude Code Skill** | Interactive exploration, complex tasks, troubleshooting | Natural language, intelligent automation, context-aware |
+| **Manual Scripts** | Scheduled tasks, automation pipelines, batch operations | Direct control, scriptable, integration-ready |
+
+### Getting Started with the Skill
+
+1. **Open project in Claude Code**
+   ```bash
+   claude-code /path/to/zabbix-master-agent
+   ```
+
+2. **Ensure `.env` is configured** with your Zabbix credentials
+
+3. **Start asking questions** - the skill activates automatically when you mention Zabbix operations
+
+4. **Examples to try:**
+   - "List all templates in my Zabbix server"
+   - "Check which hosts are unreachable"
+   - "Create a dashboard for network monitoring"
+   - "Help me troubleshoot why host X has no data"
+   - "Configure SNMP monitoring for my network devices"
+
+The skill combines the power of Claude's AI with Zabbix automation to provide an intelligent monitoring management experience.
 
 ## Examples
 

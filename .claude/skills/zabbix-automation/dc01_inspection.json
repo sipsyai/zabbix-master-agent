@@ -1,0 +1,913 @@
+{
+  "host": {
+    "hostid": "10788",
+    "host": "DC01",
+    "name": "DC01",
+    "status": "0",
+    "parentTemplates": [
+      {
+        "templateid": "10790",
+        "name": "Template Windows Server Performance"
+      }
+    ],
+    "hostgroups": [
+      {
+        "groupid": "23",
+        "name": "Windows servers"
+      }
+    ],
+    "interfaces": [
+      {
+        "interfaceid": "96",
+        "type": "1",
+        "ip": "192.168.213.142",
+        "dns": "",
+        "port": "10050"
+      }
+    ]
+  },
+  "items": [
+    {
+      "itemid": "70629",
+      "name": "AD DS (NTDS) Service State",
+      "key_": "service.state[NTDS]",
+      "status": "0",
+      "type": "7",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33028",
+          "description": "AD DS (NTDS) is not running on {HOST.NAME}",
+          "priority": "5"
+        }
+      ]
+    },
+    {
+      "itemid": "70634",
+      "name": "AD Web Services Service State",
+      "key_": "service.state[ADWS]",
+      "status": "0",
+      "type": "7",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33033",
+          "description": "AD Web Services is not running on {HOST.NAME}",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70601",
+      "name": "AD: Account Lockouts (Event 4740)",
+      "key_": "eventlog[Security,,,,4740,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33014",
+          "description": "Account lockout detected on DC01",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70616",
+      "name": "AD: Audit Log Cleared (Event 1102)",
+      "key_": "eventlog[Security,,,,1102,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33015",
+          "description": "Security audit log cleared on DC01",
+          "priority": "5"
+        }
+      ]
+    },
+    {
+      "itemid": "70617",
+      "name": "AD: Audit Policy Changed (Event 4719)",
+      "key_": "eventlog[Security,,,,4719,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33018",
+          "description": "Audit policy changed on DC01",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70615",
+      "name": "AD: Auto Account Lockout (Event 644)",
+      "key_": "eventlog[Security,,,,644,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70620",
+      "name": "AD: Directory Object Created (Event 5137)",
+      "key_": "eventlog[Security,,,,5137,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "120s",
+      "triggers": []
+    },
+    {
+      "itemid": "70621",
+      "name": "AD: Directory Object Deleted (Event 5141)",
+      "key_": "eventlog[Security,,,,5141,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "120s",
+      "triggers": []
+    },
+    {
+      "itemid": "70619",
+      "name": "AD: Directory Object Modified (Event 5136)",
+      "key_": "eventlog[Security,,,,5136,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "120s",
+      "triggers": []
+    },
+    {
+      "itemid": "70610",
+      "name": "AD: Domain Admins Group Modified (Event 4728)",
+      "key_": "eventlog[Security,,,,4728,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33016",
+          "description": "Domain Admins group membership changed",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70602",
+      "name": "AD: Failed Login Attempts (Event 4625)",
+      "key_": "eventlog[Security,,,,4625,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33013",
+          "description": "Multiple failed login attempts on DC01",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70604",
+      "name": "AD: Kerberos Pre-Auth Failed (Event 4771)",
+      "key_": "eventlog[Security,,,,4771,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33020",
+          "description": "Multiple Kerberos authentication failures",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70603",
+      "name": "AD: Kerberos TGT Request Failed (Event 4768)",
+      "key_": "eventlog[Security,,Error,,4768,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70611",
+      "name": "AD: Local Security Group Modified (Event 4732)",
+      "key_": "eventlog[Security,,,,4732,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70607",
+      "name": "AD: Password Reset Attempt (Event 4724)",
+      "key_": "eventlog[Security,,,,4724,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70618",
+      "name": "AD: SID History Added (Event 4765)",
+      "key_": "eventlog[Security,,,,4765,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33019",
+          "description": "SID History added to account",
+          "priority": "5"
+        }
+      ]
+    },
+    {
+      "itemid": "70613",
+      "name": "AD: Security Group Changed (Event 4735)",
+      "key_": "eventlog[Security,,,,4735,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70614",
+      "name": "AD: Security Group Deleted (Event 4737)",
+      "key_": "eventlog[Security,,,,4737,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33017",
+          "description": "Security group deleted on DC01",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70609",
+      "name": "AD: Special Privileges Assigned (Event 4672)",
+      "key_": "eventlog[Security,,,,4672,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70612",
+      "name": "AD: Universal Security Group Modified (Event 4756)",
+      "key_": "eventlog[Security,,,,4756,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70605",
+      "name": "AD: User Account Created (Event 4720)",
+      "key_": "eventlog[Security,,,,4720,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70606",
+      "name": "AD: User Account Deleted (Event 4726)",
+      "key_": "eventlog[Security,,,,4726,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70608",
+      "name": "AD: User Account Modified (Event 4738)",
+      "key_": "eventlog[Security,,,,4738,,skip]",
+      "status": "0",
+      "type": "7",
+      "value_type": "2",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70551",
+      "name": "Agent: Ping",
+      "key_": "agent.ping",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70552",
+      "name": "Agent: Version",
+      "key_": "agent.version",
+      "status": "0",
+      "type": "0",
+      "value_type": "1",
+      "delay": "3600s",
+      "triggers": []
+    },
+    {
+      "itemid": "70572",
+      "name": "CPU: Context Switches per Second",
+      "key_": "perf_counter_en[\"\\System\\Context Switches/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70567",
+      "name": "CPU: DPC Time",
+      "key_": "perf_counter_en[\"\\Processor Information(_total)\\% DPC Time\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70568",
+      "name": "CPU: Interrupt Time",
+      "key_": "perf_counter_en[\"\\Processor Information(_total)\\% Interrupt Time\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70569",
+      "name": "CPU: Privileged Time",
+      "key_": "perf_counter_en[\"\\Processor Information(_total)\\% Privileged Time\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70574",
+      "name": "CPU: Processor Queue Length",
+      "key_": "perf_counter_en[\"\\System\\Processor Queue Length\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70570",
+      "name": "CPU: Processor Time",
+      "key_": "perf_counter_en[\"\\Processor Information(_total)\\% Processor Time\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70577",
+      "name": "CPU: Total Utilization",
+      "key_": "system.cpu.util",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70571",
+      "name": "CPU: User Time",
+      "key_": "perf_counter_en[\"\\Processor Information(_total)\\% User Time\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70633",
+      "name": "DFS Replication Service State",
+      "key_": "service.state[DFSR]",
+      "status": "0",
+      "type": "7",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33032",
+          "description": "DFS Replication is not running on {HOST.NAME}",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70630",
+      "name": "DNS Server Service State",
+      "key_": "service.state[DNS]",
+      "status": "0",
+      "type": "7",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33029",
+          "description": "DNS Server is not running on {HOST.NAME}",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70579",
+      "name": "Disk C: Free Space",
+      "key_": "vfs.fs.size[C:,free]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "300s",
+      "triggers": []
+    },
+    {
+      "itemid": "70580",
+      "name": "Disk C: Space Utilization",
+      "key_": "vfs.fs.size[C:,pused]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "300s",
+      "triggers": []
+    },
+    {
+      "itemid": "70581",
+      "name": "Disk C: Total Space",
+      "key_": "vfs.fs.size[C:,total]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "3600s",
+      "triggers": []
+    },
+    {
+      "itemid": "70582",
+      "name": "Disk C: Used Space",
+      "key_": "vfs.fs.size[C:,used]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "300s",
+      "triggers": []
+    },
+    {
+      "itemid": "70562",
+      "name": "Disk: Avg Disk Queue Length",
+      "key_": "perf_counter_en[\"\\PhysicalDisk(_Total)\\Avg. Disk Queue Length\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70561",
+      "name": "Disk: Physical Disk Time",
+      "key_": "perf_counter_en[\"\\PhysicalDisk(_Total)\\% Disk Time\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70563",
+      "name": "Disk: Read Bytes per Second",
+      "key_": "perf_counter_en[\"\\PhysicalDisk(_Total)\\Disk Read Bytes/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70564",
+      "name": "Disk: Reads per Second",
+      "key_": "perf_counter_en[\"\\PhysicalDisk(_Total)\\Disk Reads/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70565",
+      "name": "Disk: Write Bytes per Second",
+      "key_": "perf_counter_en[\"\\PhysicalDisk(_Total)\\Disk Write Bytes/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70566",
+      "name": "Disk: Writes per Second",
+      "key_": "perf_counter_en[\"\\PhysicalDisk(_Total)\\Disk Writes/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70635",
+      "name": "Intersite Messaging Service State",
+      "key_": "service.state[IsmServ]",
+      "status": "0",
+      "type": "7",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33034",
+          "description": "Intersite Messaging is not running on {HOST.NAME}",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70631",
+      "name": "Kerberos KDC Service State",
+      "key_": "service.state[KDC]",
+      "status": "0",
+      "type": "7",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33030",
+          "description": "Kerberos KDC is not running on {HOST.NAME}",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70583",
+      "name": "Memory: Available",
+      "key_": "vm.memory.size[available]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70555",
+      "name": "Memory: Available Bytes",
+      "key_": "perf_counter_en[\"\\Memory\\Available Bytes\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70556",
+      "name": "Memory: Cache Bytes",
+      "key_": "perf_counter_en[\"\\Memory\\Cache Bytes\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70557",
+      "name": "Memory: Committed Bytes",
+      "key_": "perf_counter_en[\"\\Memory\\Committed Bytes\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70558",
+      "name": "Memory: Page Faults per Second",
+      "key_": "perf_counter_en[\"\\Memory\\Page Faults/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70559",
+      "name": "Memory: Pages per Second",
+      "key_": "perf_counter_en[\"\\Memory\\Pages/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70584",
+      "name": "Memory: Total",
+      "key_": "vm.memory.size[total]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "3600s",
+      "triggers": []
+    },
+    {
+      "itemid": "70632",
+      "name": "Netlogon Service State",
+      "key_": "service.state[Netlogon]",
+      "status": "0",
+      "type": "7",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33031",
+          "description": "Netlogon is not running on {HOST.NAME}",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70593",
+      "name": "Network: Bytes Received per Second",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Bytes Received/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70594",
+      "name": "Network: Bytes Sent per Second",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Bytes Sent/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70560",
+      "name": "Network: Bytes Total per Second",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Bytes Total/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70597",
+      "name": "Network: Current Bandwidth",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Current Bandwidth\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "300s",
+      "triggers": []
+    },
+    {
+      "itemid": "70598",
+      "name": "Network: Output Queue Length",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Output Queue Length\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70600",
+      "name": "Network: Packets Outbound Errors",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Packets Outbound Errors\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70599",
+      "name": "Network: Packets Received Errors",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Packets Received Errors\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70595",
+      "name": "Network: Packets Received per Second",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Packets Received/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70596",
+      "name": "Network: Packets Sent per Second",
+      "key_": "perf_counter_en[\"\\Network Interface(*)\\Packets Sent/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70622",
+      "name": "Service state: Active Directory Domain Services",
+      "key_": "service.info[NTDS,state]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33021",
+          "description": "Active Directory Domain Services service is not running on {HOST.NAME}",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70628",
+      "name": "Service state: Active Directory Web Services",
+      "key_": "service.info[ADWS,state]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33027",
+          "description": "Active Directory Web Services service is not running on {HOST.NAME}",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70626",
+      "name": "Service state: DFS Replication",
+      "key_": "service.info[DFSR,state]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33025",
+          "description": "DFS Replication service is not running on {HOST.NAME}",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70623",
+      "name": "Service state: DNS Server",
+      "key_": "service.info[DNS,state]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33022",
+          "description": "DNS Server service is not running on {HOST.NAME}",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70625",
+      "name": "Service state: Kerberos Key Distribution Center",
+      "key_": "service.info[KDC,state]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33024",
+          "description": "Kerberos Key Distribution Center service is not running on {HOST.NAME}",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70624",
+      "name": "Service state: Netlogon",
+      "key_": "service.info[Netlogon,state]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33023",
+          "description": "Netlogon service is not running on {HOST.NAME}",
+          "priority": "4"
+        }
+      ]
+    },
+    {
+      "itemid": "70627",
+      "name": "Service state: Windows Time Service",
+      "key_": "service.info[W32Time,state]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": [
+        {
+          "triggerid": "33026",
+          "description": "Windows Time Service service is not running on {HOST.NAME}",
+          "priority": "3"
+        }
+      ]
+    },
+    {
+      "itemid": "70573",
+      "name": "System: Processes",
+      "key_": "perf_counter_en[\"\\System\\Processes\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70575",
+      "name": "System: System Calls per Second",
+      "key_": "perf_counter_en[\"\\System\\System Calls/sec\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "0",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70576",
+      "name": "System: Threads",
+      "key_": "perf_counter_en[\"\\System\\Threads\"]",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "60s",
+      "triggers": []
+    },
+    {
+      "itemid": "70578",
+      "name": "System: Uptime",
+      "key_": "system.uptime",
+      "status": "0",
+      "type": "0",
+      "value_type": "3",
+      "delay": "600s",
+      "triggers": []
+    }
+  ]
+}

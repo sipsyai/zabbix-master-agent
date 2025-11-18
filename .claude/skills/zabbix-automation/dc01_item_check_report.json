@@ -1,0 +1,148 @@
+{
+  "timestamp": "2025-11-14T17:33:22.559905",
+  "summary": {
+    "total": 91,
+    "working": 62,
+    "unsupported": 2,
+    "no_data": 20,
+    "disabled": 7
+  },
+  "unsupported_items": [
+    {
+      "itemid": "70650",
+      "name": "LSASS: CPU Usage",
+      "key": "perf_counter_en[\"\\Process(lsass)\\% Processor Time\"]",
+      "type": "0",
+      "error": "Unsupported item key."
+    },
+    {
+      "itemid": "70651",
+      "name": "LSASS: Memory Usage",
+      "key": "perf_counter_en[\"\\Process(lsass)\\Working Set\"]",
+      "type": "0",
+      "error": "Unsupported item key."
+    }
+  ],
+  "no_data_items": [
+    {
+      "itemid": "70601",
+      "name": "AD: Account Lockouts (Event 4740)",
+      "key": "eventlog[Security,,,,4740,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70616",
+      "name": "AD: Audit Log Cleared (Event 1102)",
+      "key": "eventlog[Security,,,,1102,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70617",
+      "name": "AD: Audit Policy Changed (Event 4719)",
+      "key": "eventlog[Security,,,,4719,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70615",
+      "name": "AD: Auto Account Lockout (Event 644)",
+      "key": "eventlog[Security,,,,644,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70620",
+      "name": "AD: Directory Object Created (Event 5137)",
+      "key": "eventlog[Security,,,,5137,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70621",
+      "name": "AD: Directory Object Deleted (Event 5141)",
+      "key": "eventlog[Security,,,,5141,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70619",
+      "name": "AD: Directory Object Modified (Event 5136)",
+      "key": "eventlog[Security,,,,5136,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70610",
+      "name": "AD: Domain Admins Group Modified (Event 4728)",
+      "key": "eventlog[Security,,,,4728,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70602",
+      "name": "AD: Failed Login Attempts (Event 4625)",
+      "key": "eventlog[Security,,,,4625,,skip]",
+      "lastclock": "1763124282"
+    },
+    {
+      "itemid": "70604",
+      "name": "AD: Kerberos Pre-Auth Failed (Event 4771)",
+      "key": "eventlog[Security,,,,4771,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70603",
+      "name": "AD: Kerberos TGT Request Failed (Event 4768)",
+      "key": "eventlog[Security,,Error,,4768,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70611",
+      "name": "AD: Local Security Group Modified (Event 4732)",
+      "key": "eventlog[Security,,,,4732,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70607",
+      "name": "AD: Password Reset Attempt (Event 4724)",
+      "key": "eventlog[Security,,,,4724,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70618",
+      "name": "AD: SID History Added (Event 4765)",
+      "key": "eventlog[Security,,,,4765,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70613",
+      "name": "AD: Security Group Changed (Event 4735)",
+      "key": "eventlog[Security,,,,4735,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70614",
+      "name": "AD: Security Group Deleted (Event 4737)",
+      "key": "eventlog[Security,,,,4737,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70612",
+      "name": "AD: Universal Security Group Modified (Event 4756)",
+      "key": "eventlog[Security,,,,4756,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70605",
+      "name": "AD: User Account Created (Event 4720)",
+      "key": "eventlog[Security,,,,4720,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70606",
+      "name": "AD: User Account Deleted (Event 4726)",
+      "key": "eventlog[Security,,,,4726,,skip]",
+      "lastclock": "0"
+    },
+    {
+      "itemid": "70608",
+      "name": "AD: User Account Modified (Event 4738)",
+      "key": "eventlog[Security,,,,4738,,skip]",
+      "lastclock": "0"
+    }
+  ]
+}

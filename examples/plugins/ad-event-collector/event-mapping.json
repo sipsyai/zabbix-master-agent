@@ -1,0 +1,150 @@
+{
+  "categories": {
+    "user_management": {
+      "name": "Kullanici Yonetimi",
+      "description": "User account operations and changes",
+      "events": {
+        "4720": "User Account Created",
+        "4726": "User Account Deleted",
+        "4738": "User Account Changed",
+        "4722": "User Account Enabled",
+        "4725": "User Account Disabled",
+        "4740": "User Account Locked",
+        "4767": "User Account Unlocked",
+        "4723": "Password Change Attempted",
+        "4724": "Password Reset",
+        "4625": "Failed Password Attempt"
+      }
+    },
+    "group_management": {
+      "name": "Grup Yönetimi",
+      "description": "Security and distribution group operations",
+      "events": {
+        "4727": "Security Global Group Created",
+        "4731": "Security Local Group Created",
+        "4754": "Security Universal Group Created",
+        "4730": "Security Global Group Deleted",
+        "4734": "Security Local Group Deleted",
+        "4758": "Security Universal Group Deleted",
+        "4737": "Security Global Group Changed",
+        "4735": "Security Local Group Changed",
+        "4755": "Security Universal Group Changed",
+        "4728": "Member Added to Security Global Group",
+        "4732": "Member Added to Security Local Group",
+        "4746": "Member Added to Security Enabled Local Group",
+        "4751": "Member Added to Security Disabled Local Group",
+        "4756": "Member Added to Security Universal Group",
+        "4761": "Member Added to Security Enabled Universal Group",
+        "4729": "Member Removed from Security Global Group",
+        "4733": "Member Removed from Security Local Group",
+        "4747": "Member Removed from Security Enabled Local Group",
+        "4752": "Member Removed from Security Disabled Local Group",
+        "4757": "Member Removed from Security Universal Group",
+        "4762": "Member Removed from Security Enabled Universal Group"
+      }
+    },
+    "computer_management": {
+      "name": "Bilgisayar Yönetimi",
+      "description": "Computer account operations",
+      "events": {
+        "4741": "Computer Account Created",
+        "4743": "Computer Account Deleted",
+        "4742": "Computer Account Changed"
+      }
+    },
+    "ou_management": {
+      "name": "OU Yönetimi",
+      "description": "Organizational Unit operations",
+      "events": {
+        "5137": "Directory Service Object Created",
+        "5141": "Directory Service Object Deleted",
+        "5139": "Directory Service Object Moved"
+      }
+    },
+    "gpo_management": {
+      "name": "GPO Yönetimi",
+      "description": "Group Policy Object operations",
+      "events": {
+        "5136": "Directory Service Object Modified"
+      }
+    },
+    "logon_activity": {
+      "name": "Oturum Açma/Kapama",
+      "description": "Logon, logoff and authentication events",
+      "events": {
+        "4624": "Successful Logon",
+        "4625": "Failed Logon",
+        "4634": "Logoff",
+        "4647": "User Initiated Logoff",
+        "4672": "Special Privileges Assigned to Logon"
+      },
+      "logon_types": {
+        "2": "Interactive (Physical)",
+        "3": "Network",
+        "4": "Batch",
+        "5": "Service",
+        "7": "Unlock",
+        "8": "NetworkCleartext",
+        "9": "NewCredentials",
+        "10": "RemoteInteractive (RDP)",
+        "11": "CachedInteractive"
+      }
+    },
+    "file_server_audit": {
+      "name": "Dosya Servisi Audit",
+      "description": "File and folder access events",
+      "events": {
+        "4663": "File/Folder Access Attempted",
+        "4670": "Permissions/Ownership Changed"
+      }
+    },
+    "security_permissions": {
+      "name": "Güvenlik ve Yetki",
+      "description": "Security and permission changes",
+      "events": {
+        "4704": "User Right Assigned",
+        "4705": "User Right Removed",
+        "4706": "Trust to Domain Created",
+        "4719": "System Audit Policy Changed",
+        "4739": "Domain Policy Changed"
+      }
+    },
+    "schema_changes": {
+      "name": "Schema Değişiklikleri",
+      "description": "Active Directory schema modifications",
+      "events": {
+        "4662": "Directory Service Access"
+      }
+    },
+    "workstation_activity": {
+      "name": "Workstation Activity",
+      "description": "Workstation lock/unlock and screensaver events",
+      "events": {
+        "4800": "Workstation Locked",
+        "4801": "Workstation Unlocked",
+        "4802": "Screensaver Invoked",
+        "4803": "Screensaver Dismissed"
+      }
+    },
+    "critical_groups": {
+      "name": "Kritik Grup İzleme",
+      "description": "Monitoring changes to critical security groups",
+      "groups": [
+        "Domain Admins",
+        "Enterprise Admins",
+        "Schema Admins",
+        "Administrators",
+        "Account Operators",
+        "Backup Operators",
+        "Server Operators",
+        "Print Operators"
+      ],
+      "events": {
+        "4728": "Member Added to Global Group",
+        "4729": "Member Removed from Global Group",
+        "4732": "Member Added to Local Group",
+        "4733": "Member Removed from Local Group"
+      }
+    }
+  }
+}

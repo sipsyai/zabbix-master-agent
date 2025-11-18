@@ -112,23 +112,37 @@ All scripts automatically use the credentials from your `.env` file.
 
 ### Getting Started with the Skill
 
-1. **Open project in Claude Code**
+1. **Clone the repository**
    ```bash
-   claude-code /path/to/zabbix-master-agent
+   git clone https://github.com/sipsyai/zabbix-master-agent.git
    ```
 
-2. **Ensure `.env` is configured** with your Zabbix credentials
+2. **Navigate to the project directory**
+   ```bash
+   cd zabbix-master-agent
+   ```
 
-3. **Start asking questions** - the skill activates automatically when you mention Zabbix operations
+3. **Configure your environment**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your Zabbix credentials
+   ```
 
-4. **Examples to try:**
+4. **Open Claude Code**
+   - Open Claude Code application
+   - Navigate to this project folder
+   - Or use the terminal command: `claude`
+
+5. **Start using the skill** - Simply type your questions or requests in natural language:
    - "List all templates in my Zabbix server"
    - "Check which hosts are unreachable"
    - "Create a dashboard for network monitoring"
    - "Help me troubleshoot why host X has no data"
    - "Configure SNMP monitoring for my network devices"
+   - "Add SNMP monitoring for device 192.168.1.100"
+   - "Show me all triggers in problem state"
 
-The skill combines the power of Claude's AI with Zabbix automation to provide an intelligent monitoring management experience.
+The zabbix-master skill activates automatically when you mention Zabbix-related operations. It reads your `.env` configuration and handles all API operations intelligently.
 
 ## Examples
 
